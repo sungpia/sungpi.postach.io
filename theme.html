@@ -28,7 +28,14 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
     </script>
+    
     {% endif %}
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
   </head>
   <body{% if is_post or is_tag or is_page %} class="short-header"{% endif %}>
 
@@ -51,6 +58,9 @@
             {% for page in pages %}
             <li><a href="{{ page.permalink }}" class="{{ set_active(page.permalink) }}">{{ page.title }}</a></li>
             {% endfor %}
+          <li><a href="/tag/whoshungry" class="{{ set_active('/tag/whoshungry') }}">Who's Hungry?</a></li>
+          <li><a href="/tag/compiler" class="{{ set_active('/tag/compiler') }}">Compiler</a></li>
+          
         </ul>
         {% endif %}
       </div>
