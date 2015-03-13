@@ -2,6 +2,9 @@
 <html prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
+    
+    <link href="./assets/css/prism.css" rel="stylesheet" />
+    <script src="./assets/js/prism.js"></script>
     <title>
       {% if is_login %}Login
       {% elif is_home %}{{ site.author }}
@@ -36,8 +39,6 @@
     <script type="text/javascript"
       src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
-    <link href="themes/prism.css" rel="stylesheet" />
-    <script src="prism.js"></script>
   </head>
   <body{% if is_post or is_tag or is_page %} class="short-header"{% endif %}>
 
