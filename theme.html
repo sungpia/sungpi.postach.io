@@ -62,6 +62,7 @@
             {% for page in pages %}
             <li><a href="{{ page.permalink }}" class="{{ set_active(page.permalink) }}">{{ page.title }}</a></li>
             {% endfor %}
+            <li><<a href="/tag/c++" class="{{ set_active('/tag/c++') }}">C++</a></li>
           <li><a href="/tag/whoshungry" class="{{ set_active('/tag/whoshungry') }}">Who's Hungry?</a></li>
           <li><a href="/tag/compiler" class="{{ set_active('/tag/compiler') }}">Compiler</a></li>
           <li><a href="/tag/general" class="{{ set_active('/tag/general') }}">General</a></li>
